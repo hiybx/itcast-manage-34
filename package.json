@@ -25,5 +25,9 @@
     "less": "^3.0.4",
     "less-loader": "^4.1.0",
     "vue-template-compiler": "^2.6.10"
-  }
+  },
+  "extends": [
+    "plugin:vue/essential",
+    "@Vue/standard"
+  ]
 }

@@ -8,6 +8,17 @@ import '@/styles/index.less'
 
 // 引入路由
 import router from '@/router/index.js'
+
+// 添加导航守卫
+
+router.beforeEach((to, from, next) => {
+  let token = localStorage.getItem('itcast_heimatoutiao')
+  if (token || to.path === '/login') {
+    next()
+  } else {
+    next({ name: 'login' })
+  }
+})
 // 让Vue使用element-ui
 Vue.use(ElementUI)
 
